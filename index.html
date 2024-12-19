@@ -33,8 +33,9 @@
                     <div class="hero-inner">
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0"><em>Adopter, marcher, gagner !</em></h1>
-	                        <p class="hero-paragraph">AdopStep est une application "Move-to-Earn". Transformez vos pas en récompenses en élevant un animal virtuel.</p>
-	                        <p class="hero-paragraph">Marchez pour nourrir, soigner, et faire évoluer votre compagnon tout en débloquant des objets uniques et des avantages exclusifs.</p>
+	                        <p class="hero-paragraph">Adop'Step est un jeu mobile ludique dans lequel on s'occupe d'un LittleMate.</p>
+	                        <p class="hero-paragraph">Transformez vos pas en StepCoins afin de pourvoir au besoin de votre compagnon.</p>
+	                        <p class="hero-paragraph">Utilisez vos StepCoins pour nourrir, soigner, et faire évoluer votre compagnon tout en débloquant des objets uniques et des avantages exclusifs.</p>
                             <p class="hero-paragraph">Plus vous êtes actif, plus votre animal grandit et vous rapporte des récompenses, combinant amusement, motivation, et un mode de vie plus sain.</p>
 	                        <div class="cta-cta">
                                 <button class="button-29 open-dialog" role="button">Pré-inscription</button>
@@ -50,36 +51,60 @@
 								<img class="hero-media-illustration-image asset-dark" src="./images/hero-media-illustration-dark.svg" alt="Hero media illustration">
 							</div>
 							<div class="hero-media-container">  
-                                <svg width="540" height="370" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 370">
+                                <svg class="responsive-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 370" preserveAspectRatio="xMidYMid meet">
                                     <defs>
                                       <linearGradient x1="0%" y1="0%" y2="100%" id="a">
                                         <stop stop-color="#F8F9FB" offset="0%" />
                                         <stop stop-color="#FFF" offset="100%" />
                                       </linearGradient>
                                     </defs>
-                                    <g fill="none" fill-rule="evenodd">
-                                      <image href="./images/chibis.jpg" x="0" y="0" width="540" height="370" />
-                                    </g>
                                   </svg>
+                                  <img src="./images/niche.png" class="image-overlay" alt="Page acceuil application">                         
 							</div>
 						</div>
                     </div>
                 </div>
             </section>
 
-            <section class="features section">
+            <section id="game" class="features section">
                 <div class="container">
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
 								<h2 class="section-title mt-0">Le jeu</h2>
-	                            <p class="section-paragraph">Avec Adop'Step adopter un animal, marcher pour générer des points, et gagner des récompenses avec vos points !</p>
+	                            <p class="section-paragraph">Avec Adop'Step adopter un Little Mate, faite des pas ou réaliser des défis physique et personnaliser votre little mate</p>
 								<div class="features-image">
-									<img class="features-illustration asset-dark" src="./images/features-illustration-dark.svg" alt="Feature illustration">
-									<img class="features-box asset-dark" src="./images/features-box-dark.svg" alt="Feature box">
+                                    <!-- DARK -->
+                                    <img class="features-illustration asset-dark" src="./images/features-illustration-dark.svg" alt="Feature illustration">
+									<svg class="features-box asset-dark" width="540" height="370" xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                          <linearGradient x1="0%" y1="0%" y2="100%" id="a">
+                                            <stop stop-color="#223146" offset="0%" />
+                                            <stop stop-color="#223146" stop-opacity="0" offset="100%" />
+                                          </linearGradient>
+                                        </defs>
+                                        <g fill="none" fill-rule="evenodd">
+                                          <!-- Remplacer le fond par une image -->
+                                          <image href="./images/combo.png" x="0" y="0" width="540" height="370" />
+                                        </g>
+                                    </svg>                                      
 									<img class="features-illustration asset-dark" src="./images/features-illustration-top-dark.svg" alt="Feature illustration top">
+                                      <!-- LIGHT  -->
 									<img class="features-illustration asset-light" src="./images/features-illustration-light.svg" alt="Feature illustration">
-									<img class="features-box asset-light" src="./images/features-box-light-image.svg" alt="Feature box">
+                                    <svg class="features-box asset-light" width="540" height="370" xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <linearGradient x1="0%" y1="0%" y2="100%" id="a">
+                                                <stop stop-color="#F8F9FB" offset="0%" />
+                                                <stop stop-color="#FFF" offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                        <g fill="none" fill-rule="evenodd">
+                                            <!-- Remplacer le rectangle blanc par une image -->
+                                            <image class="responsive-image-combo" href="./images/combo.png" x="0" y="0" width="540" height="370" />
+                                        </g>
+                                    </svg>
+                                    
+									<!-- <img class="features-box asset-light" src="./images/features-box-light-image.svg" alt="Feature box"> -->
 									<img class="features-illustration asset-light" src="./images/features-illustration-top-light.svg" alt="Feature illustration top">
 								</div>
 							</div>
@@ -88,11 +113,11 @@
                             <div class="feature is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-                                        <img class="asset-light" src="./images/chibis_template.jpg" style="width: 250px; height: 250px; object-fit: cover;" alt="Feature 01">
+                                        <img class="asset-light" src="./images/littlemate.jpg" style="width: 250px; height: 250px; object-fit: cover;" alt="Feature 01">
                                     </div>
 									<div class="feature-content">
                                     	<h3 class="feature-title mt-0">Adopter</h3>
-                                    	<p class="text-sm mb-0">Adopter un animal de compagnie parmis une large sélection.</p>
+                                    	<p class="text-sm mb-0">Adoptez votre Little Mate parmi une large sélection et devenez son responsable ! Nourrissez-le, jouez avec lui, et prenez soin de ses besoins quotidiens pour qu'il grandisse heureux et en pleine forme !</p>
 									</div>
 								</div>
                             </div>
@@ -103,7 +128,7 @@
                                     </div>
 									<div class="feature-content">
                                     	<h3 class="feature-title mt-0">Marcher</h3>
-                                    	<p class="text-sm mb-0">Marcher avec votre animal pour gagner des points et le chouchouter</p>
+                                    	<p class="text-sm mb-0">Marchez et cumulez des StepCoins à chaque pas ! Pas besoin de jouer, il suffit de bouger pour en gagner, celle-ci servira à répondre aux besoins de votre Little Mate.</p>
 									</div>
 								</div>
                             </div>
@@ -114,9 +139,32 @@
                                     </div>
 									<div class="feature-content">
                                     	<h3 class="feature-title mt-0">Gagner !</h3>
-                                    	<p class="text-sm mb-0">A 14 ans débloquer dans la boutique l'achat de bon d'achat. A 18 ans débloquer la conversion en crypto-monnaie.</p>
+                                    	<p class="text-sm mb-0">À 15 ans, débloquez l'achat de bons d'achat dans la boutique. À 18 ans, accédez à la possibilité de convertir vos gains en crypto-monnaie, transformant ainsi vos efforts en récompenses réelles.</p>
 									</div>
 								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" class="faq section">
+                <div class="container">
+                    <div class="faq-inner section-inner">
+                        <h2 class="section-title text-center mt-0">FAQ</h2>
+                        <p class="section-paragraph text-center">Questions fréquentes pour vous guider.</p>
+                        <div class="faq-items">
+                            <div class="faq-item fadein-left">
+                                <h3 class="faq-question">Comment fonctionne Adop'Step ?</h3>
+                                <p class="faq-answer">Adop'Step vous permet de transformer vos pas quotidiens en récompenses pour élever un compagnon virtuel. Marchez pour gagner des points et débloquer des objets.</p>
+                            </div>
+                            <div class="faq-item fadein-left">
+                                <h3 class="faq-question">Est-ce que l'application est gratuite ?</h3>
+                                <p class="faq-answer">Oui, Adop'Step est entièrement gratuit. Des options d'achat in-app seront disponibles pour des fonctionnalités supplémentaires.</p>
+                            </div>
+                            <div class="faq-item fadein-left">
+                                <h3 class="faq-question">À partir de quel âge puis-je jouer ?</h3>
+                                <p class="faq-answer">L'application est accessible dès 13 ans avec le consentement parental et offre des fonctionnalités spécifiques selon l'âge.</p>
                             </div>
                         </div>
                     </div>
@@ -166,13 +214,13 @@
                     </div>
                     <ul class="footer-links list-reset">
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#">Acceuil</a>
                         </li>
                         <li>
-                            <a href="#">A propos</a>
+                            <a href="#game">A propos</a>
                         </li>
                         <li>
-                            <a href="#">FAQ's</a>
+                            <a href="#faq">FAQ's</a>
                         </li>
                         <li>
                             <a href="#">Support</a>
@@ -204,7 +252,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="footer-copyright">&copy; 2024 Adopt'Step, all rights reserved</div>
+                    <div class="footer-copyright">&copy; 2024 Adop'Step, all rights reserved</div>
                 </div>
             </div>
         </footer>

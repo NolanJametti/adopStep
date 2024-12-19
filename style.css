@@ -1433,6 +1433,37 @@ label {
   position: relative;
 }
 
+@media (max-width: 640px) {
+  .hero-media {
+    margin-top: 60px;
+    margin-bottom: 300px;
+  }
+}
+
+@media (min-width: 439px) and (max-width: 640px) {
+  .hero-media {
+    margin-top: 60px;
+    margin-bottom: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-cta .button {
+    min-width: 170px;
+  }
+  .hero-cta .button:first-child {
+    margin-bottom: 16px;
+  }
+  .lights-toggle {
+    justify-content: center;
+  }
+}
+
 .hero-media-illustration {
   position: absolute;
   top: -10%;
@@ -1516,6 +1547,7 @@ label {
   }
   .hero-media {
     z-index: 0;
+
   }
   .hero-media img,
   .hero-media svg {
@@ -2035,6 +2067,12 @@ hr::after,
   transform: translateY(2px);
 }
 
+@media (max-width: 700px) {
+  .button-29 {
+    margin-bottom: 40px;
+  }
+}
+
 
 /* CSS */
 .button-30 {
@@ -2245,4 +2283,145 @@ hr::after,
 
 .dialog-buttons button[type="button"]:hover {
   background-color: #e0e0e0;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto; /* Conserve le ratio d'aspect */
+  max-width: 100%; /* Empêche l'image de dépasser le conteneur */
+  display: block; /* Évite les espaces blancs sous l'image dans certains cas */
+}
+
+.faq {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.faq-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-items {
+  margin-top: 40px;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.faq .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.faq .section-paragraph {
+  color: #777;
+  font-size: 1.125rem;
+}
+
+.fadein-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Dans le mode sombre */
+.lights-off .faq {
+  background-color: #182538;
+}
+
+.lights-off .faq-items {
+  color: #8595AE;
+}
+
+.lights-off .faq .section-paragraph {
+  color: #8595AE;
+}
+
+.lights-off .faq-answer {
+  color: #8595AE;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ou ajustez la taille selon vos besoins */
+  height: auto; /* Ajustez si nécessaire */
+  object-fit: cover; /* Assurez-vous que l'image couvre le conteneur sans déformation */
+  z-index: 1; /* Assurez-vous que l'image est au-dessus du SVG */
+}
+
+/* Sur les écrans de taille md et moins */
+@media (max-width: 768px) {
+  .image-overlay {
+      left: 10%;
+      width: 80%;  /* Réduire la largeur de l'image à 80% de son conteneur */
+      height: auto; /* Vous pouvez ajuster ou définir une hauteur spécifique si nécessaire */
+  }
+  .responsive-image {
+      width: 80%;  /* Réduire la taille du SVG */
+      height: auto;
+  }
+}
+
+/* Sur les écrans très petits (sm) */
+@media (max-width: 480px) {
+  .image-overlay {
+      left: 20%; /* Centrer l'image horizontalement */
+      width: 60%;  /* Réduire la largeur de l'image à 70% pour les petits écrans */
+      height: auto;
+  }
+  .responsive-image {
+      width: 60%;  /* Réduire la taille du SVG pour les très petits écrans */
+      height: auto;
+  }
+}
+
+.responsive-image-combo {
+  width: 540px;
+  height: 370px;
+}
+
+/* Pour les écrans de taille moyenne (par exemple, les tablettes) et plus petits */
+@media (max-width: 768px) {
+  .responsive-image-combo {
+    width: 100%; /* L'image occupe toute la largeur disponible */
+    height: auto; /* Maintient les proportions de l'image */
+  }
+}
+
+/* Pour les petits écrans (téléphones mobiles) */
+@media (max-width: 480px) {
+  .responsive-image-combo {
+    width: 70%; /* L'image occupe 80% de la largeur */
+    height: auto; /* Maintient les proportions */
+  }
 }
