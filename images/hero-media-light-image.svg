@@ -1,0 +1,9 @@
+<svg width="538" height="380" viewBox="0 0 538 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="clip">
+      <rect width="538" height="380" />
+    </clipPath>
+  </defs>
+  <rect width="538" height="380" fill="#FFF" />
+  <image href="./garcon_chibis.jpg" x="0" y="0" width="538" height="380" clip-path="url(#clip)" />
+</svg>
