@@ -1,12 +1,19 @@
 import express from 'express';
 import fs from 'fs';
 import bodyParser from 'body-parser';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const port = 3000;
 
+// Obtenir le répertoire actuel
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Utilisation de body-parser pour analyser les données JSON
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Route pour enregistrer l'email
 app.post('/api/save-email', (req, res) => {
@@ -26,6 +33,7 @@ app.post('/api/save-email', (req, res) => {
     });
 });
 
+
 // Route pour récupérer les emails en JSON
 app.get('/api/email', (req, res) => {
     fs.readFile('emails.csv', 'utf8', (err, data) => {
@@ -37,6 +45,11 @@ app.get('/api/email', (req, res) => {
         const emails = data.split('\n').filter(line => line.trim() !== '');
         res.status(200).json({ emails });
     });
+});
+
+// Route par défaut pour servir index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Lancer le serveur

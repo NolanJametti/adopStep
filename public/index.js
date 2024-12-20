@@ -80,9 +80,22 @@
     emailForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const email = document.getElementById("email").value;
-
-        console.log("Adresse email envoyée :", email); // Remplacez ceci par votre logique `fetch`
-        dialog.close(); // Fermer le dialogue après envoi
+    
+        fetch('http://localhost:3000/api/save-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Réponse du serveur :", data);
+            dialog.close(); // Fermer le dialogue après envoi
+        })
+        .catch(error => {
+            console.error("Erreur lors de l'envoi de l'email :", error);
+        });
     });
 
     const fadeInElements = document.querySelectorAll('.fadein-left');
